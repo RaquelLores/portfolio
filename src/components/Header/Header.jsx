@@ -29,6 +29,7 @@ const Header = () => {
                     </ul>
                 </nav>
                 {/*for smaller screen*/}
+                
             </div>
 
         </>
