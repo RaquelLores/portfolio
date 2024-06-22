@@ -18,11 +18,11 @@
   background: rgba(0,0,0,0.23);
   border-radius: 10px;
 }
-::webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb{
   background:#262644;
   border-radius: 10px;
 }
-::webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover{
   background:#292947;
   border-radius: 10px;
 }
