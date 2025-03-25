@@ -9,10 +9,7 @@ function App() {
       <div className="main_section w-full min-h-screen scroll-smooth">
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          {/* <Route path="/about me" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={Contact />} /> */}
+          <Route path="/*" element={<Home />} />
         </Routes>
       </div>
     </Router>
