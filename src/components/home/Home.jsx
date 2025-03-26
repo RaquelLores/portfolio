@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import Spline from '@splinetool/react-spline';
 
 const Home = () => {
   const location = useLocation();
@@ -24,15 +25,28 @@ const Home = () => {
             <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
               I'm currently focused on coding accessible products.
             </p>
+            <Spline
+        scene="https://prod.spline.design/kBQxPSiE3D55bn6W/scene.splinecode" 
+      />
           </>
         )}
-        {location.pathname === '/about' && (<>
+        {location.pathname === '/about' && (
+          <>
             <h1 className="text-green-500 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
               Raquel Lores Casalinas
             </h1>
             <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
-            I create clean, maintainable code for user interfaces with a thoughtful design, focusing on performance and usability. At Edison Next, I’ve developed dynamic, reusable software components. In my spare time, I enjoy hanging out with my husband and kids or cycling around Madrid, soaking up the 🌞.</p>
-        </>
+              I create clean, maintainable code for user interfaces with a thoughtful design, focusing on performance and usability. At Edison Next, I’ve developed dynamic, reusable software components. In my spare time, I enjoy hanging out with my husband and kids or cycling around Madrid, soaking up the 🌞
+            </p>
+            <a 
+              href="/path/to/your/cv.pdf" 
+              className="text-green-400 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl underline"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              View my CV
+            </a>
+          </>
         )}
         {location.pathname === '/portfolio' && (
           <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
