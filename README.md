@@ -8,7 +8,7 @@ It is continuously updated as I develop new projects and refine existing ones.
 
 
 Portafolio Personal de Desarrolladora Web👩‍💻
-¡Bienvenido/a a mi repositorio de GitHub! En este proyecto, he creado mi portafolio personal como desarrolladora web utilizando tecnologías como Vite, React y Tailwind CSS. Aquí, encontrarás información detallada sobre el proyecto y cómo puedes instalarlo y ejecutarlo localmente.
+¡Bienvenido/a a mi repositorio de GitHub! En este proyecto, he creado mi portafolio utilizando tecnologías como Vite, React y Tailwind CSS. Aquí, encontrarás información detallada sobre el proyecto y cómo puedes instalarlo y ejecutarlo localmente.
 
 Tecnologías Utilizadas
 Vite: Herramienta de desarrollo rápida para proyectos web con React.
