@@ -26,8 +26,9 @@ const Home = () => {
               I'm currently focused on coding accessible products.
             </p>
             <Spline
-        scene="https://prod.spline.design/kBQxPSiE3D55bn6W/scene.splinecode" 
-      />
+                scene="https://prod.spline.design/kBQxPSiE3D55bn6W/scene.splinecode"
+                showControls={false}
+              />
           </>
         )}
         {location.pathname === '/about' && (
@@ -39,23 +40,23 @@ const Home = () => {
               I create clean, maintainable code for user interfaces with a thoughtful design, focusing on performance and usability. At Edison Next, I’ve developed dynamic, reusable software components. In my spare time, I enjoy hanging out with my husband and kids or cycling around Madrid, soaking up the 🌞
             </p>
             <a 
-              href="/path/to/your/cv.pdf" 
-              className="text-green-400 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl underline"
+              href="/assets/25325 CV Raquel Lores Programadora Frontend.pdf"
+              className="text-slate-400 text-xl font-normal hover:text-green-400 active:text-green-400 focus:outline-none"
               target="_blank" 
               rel="noopener noreferrer"
             >
-              View my CV
+              View my CV in Spanish.
             </a>
           </>
         )}
         {location.pathname === '/portfolio' && (
           <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
-            Portfolio content goes here.
+            Please come back soon, I am working on Portfolio content.
           </p>
         )}
         {location.pathname === '/contact' && (
           <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
-            Contact content goes here.
+            Contact form underconstruction.
           </p>
         )}
       </div>

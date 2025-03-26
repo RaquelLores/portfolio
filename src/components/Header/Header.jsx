@@ -10,12 +10,12 @@ const Header = () => {
                 <nav className="w-full bg-slate-950/30 backdrop-blur-[6px] py-6 px-32 shadow lg:flex md:hidden items-center justify-between">
                     <Link 
                         to="/"
-                        className="text-green-500 text-2x1 font-medium tracking-wider">Portfolio</Link>
+                        className="text-green-400 text-2x1 font-medium tracking-wider">Portfolio</Link>
                     <ul className="list-none flex items-center gap-7">
                         <li>
                             <Link 
                                 to="/about"
-                                className="text-green-400 text-xl font-medium hover:text-green-400 active:text-green-400 focus:outline-none"
+                                className="text-slate-400 text-xl font-normal hover:text-green-400 active:text-green-400 focus:outline-none"
                             >
                                 About
                             </Link>
