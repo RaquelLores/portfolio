@@ -32,22 +32,24 @@ const Home = () => {
           </>
         )}
         {location.pathname === '/about' && (
-          <>
-            <h1 className="text-green-500 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
-              Raquel Lores Casalinas
-            </h1>
-            <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
-              I create clean, maintainable code for user interfaces with a thoughtful design, focusing on performance and usability. At Edison Next, I’ve developed dynamic, reusable software components. In my spare time, I enjoy hanging out with my husband and kids or cycling around Madrid, soaking up the 🌞
-            </p>
-            <a 
-              href="/assets/25325 CV Raquel Lores Programadora Frontend.pdf"
-              className="text-slate-400 text-xl font-normal hover:text-green-400 active:text-green-400 focus:outline-none"
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              View my CV in Spanish.
-            </a>
-          </>
+  <>
+    <h1 className="text-green-500 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl mb-4">
+      Raquel Lores Casalinas
+    </h1>
+    <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
+      I create clean, maintainable code for user interfaces with a thoughtful design, focusing on performance and usability. 
+      <br />
+      At Edison Next, I’ve developed dynamic, reusable software components. In my spare time, I enjoy hanging out with my husband and kids or cycling around Madrid, soaking up the 🌞
+    </p>
+    <a
+      href="/assets/25325 CV Raquel Lores Programadora Frontend.pdf"
+      className="text-slate-400 text-xl font-normal hover:text-green-400 active:text-green-400 focus:outline-none"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View my CV in Spanish.
+    </a>
+  </>
         )}
         {location.pathname === '/portfolio' && (
           <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
