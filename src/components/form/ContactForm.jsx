@@ -10,7 +10,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     const response = await fetch("https://formspree.io/f/xjkyenpa", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -26,7 +26,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4"> {/* Espaciado vertical entre los elementos */}
+    <form onSubmit={handleSubmit} className="space-y-4">
       <input
         type="text"
         name="name"
@@ -34,7 +34,7 @@ const ContactForm = () => {
         onChange={handleChange}
         placeholder="Your name"
         required
-        className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 w-full"
+        className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 w-full text-gray-900" // Updated text color
       />
       <input
         type="email"
@@ -43,7 +43,7 @@ const ContactForm = () => {
         onChange={handleChange}
         placeholder="Your email"
         required
-        className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 w-full"
+        className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 w-full text-gray-900" // Updated text color
       />
       <textarea
         name="message"
@@ -51,7 +51,7 @@ const ContactForm = () => {
         onChange={handleChange}
         placeholder="Your message"
         required
-        className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 w-full"
+        className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 w-full text-gray-900" // Updated text color
       />
       <button
         type="submit"
@@ -65,4 +65,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-

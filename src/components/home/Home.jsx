@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 import ContactForm from '../form/ContactForm.jsx';
 
+
 const Home = () => {
   const location = useLocation();
   const [isContentLoaded, setIsContentLoaded] = useState(false);
@@ -83,16 +84,21 @@ const Home = () => {
           </>
         )}
         {location.pathname === '/portfolio' && (
+          <div>
           <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
             Please come back soon, I am working on Portfolio content.
           </p>
+          
+          </div>
         )}
         {location.pathname === '/contact' && (
-          <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
-            Drop me a line: 
-            <ContactForm/>
+          <div className="text-gray-100 max-w-2xl">
+          <p className="text-base md:text-lg font-medium tracking-[0.05rem] leading-relaxed mb-4">
+          Drop me a line:
           </p>
-        )}
+          <ContactForm />
+          </div>
+)}
       </div>
     </div>
   );
