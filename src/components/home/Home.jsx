@@ -91,16 +91,15 @@ const Home = () => {
           </>
         )}
 
-        {location.pathname === "/portfolio" && (
-          <>
-            <h2 className="text-green-400 text-3xl font-bold mb-6">Projects</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+{location.pathname === "/portfolio" && (
+  <>
+    <h2 className="text-green-400 text-3xl font-bold mb-6">Projects</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
               <Card
                 imageSrc={IC}
-                description="Project 1: IC main page designed and developed using React JavaScript. 
-                The app shows the user name dynamically and is responsive"
-                buttonText="View Project"
-                buttonLink="https://example.com/project1"
+                description="Project 1: Analysts Tool Home. Stack: Figma, React JS, TypeScript, Tailwind CSS. Responsive, dynamic username, reusable components."
+                buttonText="Private Repo"
+                buttonLink=""
               />
               <Card
                 imageSrc="https://via.placeholder.com/300x200"
