@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import Spline from '@splinetool/react-spline';
-import ContactForm from '../form/ContactForm.jsx';
-import Card from '../card/Card.jsx'; // Import the Card component
-
- 
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import Spline from "@splinetool/react-spline";
+import ContactForm from "../form/ContactForm.jsx";
+import Card from "../card/Card.jsx"; // Import the Card component
+import IC from "../../assets/IC.png";
 
 const Home = () => {
   const location = useLocation();
   const [isContentLoaded, setIsContentLoaded] = useState(false);
-  const [isSplineLoaded, setIsSplineLoaded] = useState(false); 
+  const [isSplineLoaded, setIsSplineLoaded] = useState(false);
 
   useEffect(() => {
     // Simulate content loading delay (e.g., fetching data or assets)
@@ -17,13 +16,13 @@ const Home = () => {
       setIsContentLoaded(true);
     }, 500); // Adjust the delay as needed (500ms in this case)
 
-    return () => clearTimeout(timer); 
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="flex items-center justify-center min-h-screen px-10">
       <div className="text-left lg:w-3/5 md:w-2/3 sm:w-full w-full">
-        {location.pathname === '/' && (
+        {location.pathname === "/" && (
           <>
             {!isContentLoaded ? (
               <p className="text-gray-400 text-lg">Loading content...</p>
@@ -39,7 +38,8 @@ const Home = () => {
                   I create things for the web.
                 </h2>
                 <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] mb-4 leading-relaxed mt-2.5 max-w-2xl">
-                  I'm a software developer specializing in building and designing great digital experiences.
+                  I'm a software developer specializing in building and
+                  designing great digital experiences.
                 </p>
                 <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
                   I'm currently acquiring in-depth knowledge in key areas of AI.
@@ -47,32 +47,37 @@ const Home = () => {
 
                 {/* Spline Component with Loading Indicator */}
                 <div className="flex items-center justify-center w-full h-[500px] sm:h-[300px]">
-              {!isSplineLoaded && (
-                <div className="absolute inset-0 flex items-center justify-center bg-gray-900">
-                  <p className="text-gray-400 text-lg">Loading 3D Scene...</p>
-                </div>
-              )}
-              <Spline
-                scene="https://prod.spline.design/kBQxPSiE3D55bn6W/scene.splinecode"
-                showControls={false}
-                onLoad={() => setIsSplineLoaded(true)}
-              />
+                  {!isSplineLoaded && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-gray-900">
+                      <p className="text-gray-400 text-lg">
+                        Loading 3D Scene...
+                      </p>
+                    </div>
+                  )}
+                  <Spline
+                    scene="https://prod.spline.design/kBQxPSiE3D55bn6W/scene.splinecode"
+                    showControls={false}
+                    onLoad={() => setIsSplineLoaded(true)}
+                  />
                 </div>
               </>
             )}
           </>
         )}
-        {location.pathname === '/about' && (
+        {location.pathname === "/about" && (
           <>
             <h1 className="text-green-500 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl mb-4">
               Raquel Lores Casalinas
             </h1>
             <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
-              I create clean, maintainable code for user interfaces with a thoughtful design, focusing on performance and usability.
+              I create clean, maintainable code for user interfaces with a
+              thoughtful design, focusing on performance and usability.
               <br />
-              At Edison Next, I’ve developed dynamic, reusable software components. 
+              At Edison Next, I’ve developed dynamic, reusable software
+              components.
               <br />
-              In my spare time, I enjoy hanging out with my husband and kids or cycling around Madrid, soaking up the 🌞
+              In my spare time, I enjoy hanging out with my husband and kids or
+              cycling around Madrid, soaking up the 🌞
             </p>
             <a
               href="/assets/28325 CV Raquel Lores Programadora Frontend.pdf"
@@ -86,14 +91,14 @@ const Home = () => {
           </>
         )}
 
-
-      {location.pathname === '/portfolio' && (
+        {location.pathname === "/portfolio" && (
           <>
             <h2 className="text-green-400 text-3xl font-bold mb-6">Projects</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card
-                imageSrc="https://via.placeholder.com/300x200"
-                description="Project 1: A brief description."
+                imageSrc={IC}
+                description="Project 1: IC main page designed and developed using React JavaScript. 
+                The app shows the user name dynamically and is responsive"
                 buttonText="View Project"
                 buttonLink="https://example.com/project1"
               />
@@ -113,15 +118,14 @@ const Home = () => {
           </>
         )}
 
-
-        {location.pathname === '/contact' && (
+        {location.pathname === "/contact" && (
           <div className="text-gray-100 max-w-2xl">
-          <p className="text-base md:text-lg font-medium tracking-[0.05rem] leading-relaxed mb-4">
-          Drop me a line:
-          </p>
-          <ContactForm />
+            <p className="text-base md:text-lg font-medium tracking-[0.05rem] leading-relaxed mb-4">
+              Drop me a line:
+            </p>
+            <ContactForm />
           </div>
-)}
+        )}
       </div>
     </div>
   );
