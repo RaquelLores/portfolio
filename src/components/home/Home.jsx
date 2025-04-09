@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 import ContactForm from '../form/ContactForm.jsx';
+import Card from '../card/Card.jsx'; // Import the Card component
 
+ 
 
 const Home = () => {
   const location = useLocation();
@@ -83,14 +85,35 @@ const Home = () => {
             </a>
           </>
         )}
-        {location.pathname === '/portfolio' && (
-          <div>
-          <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
-            Please come back soon, I am working on Portfolio content.
-          </p>
-          
-          </div>
+
+
+      {location.pathname === '/portfolio' && (
+          <>
+            <h2 className="text-green-400 text-3xl font-bold mb-6">Projects</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card
+                imageSrc="https://via.placeholder.com/300x200"
+                description="Project 1: A brief description."
+                buttonText="View Project"
+                buttonLink="https://example.com/project1"
+              />
+              <Card
+                imageSrc="https://via.placeholder.com/300x200"
+                description="Project 2: A brief description."
+                buttonText="View Project"
+                buttonLink="https://example.com/project2"
+              />
+              <Card
+                imageSrc="https://via.placeholder.com/300x200"
+                description="Project 3: A brief description."
+                buttonText="View Project"
+                buttonLink="https://example.com/project3"
+              />
+            </div>
+          </>
         )}
+
+
         {location.pathname === '/contact' && (
           <div className="text-gray-100 max-w-2xl">
           <p className="text-base md:text-lg font-medium tracking-[0.05rem] leading-relaxed mb-4">
