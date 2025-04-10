@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Spline from "@splinetool/react-spline";
 import ContactForm from "../form/ContactForm.jsx";
-import Card from "../card/Card.jsx"; // Import the Card component
+import Card from "../card/Card.jsx";
 import IC from "../../assets/IC.png";
+import WPRFE from "../../assets/WPRFE.png";
 
 const Home = () => {
   const location = useLocation();
@@ -91,21 +92,24 @@ const Home = () => {
           </>
         )}
 
-{location.pathname === "/portfolio" && (
-  <>
-    <h2 className="text-green-400 text-3xl font-bold mb-6">Projects</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        {location.pathname === "/portfolio" && (
+          <>
+            <h2 className="text-green-400 text-3xl font-bold mb-6">Projects</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-15">
+              {" "}
+              
               <Card
                 imageSrc={IC}
-                description="Project 1: Analysts Tool Home. Stack: Figma, React JS, TypeScript, Tailwind CSS. Responsive, dynamic username, reusable components."
-                buttonText="Private Repo"
-                buttonLink=""
+                description="Feb 2025: I designed and developed the Analysts' Platform Home Page using reusable components.
+                I also created a Figma prototype to showcase the design.  
+                Tech Stack: Figma, React.js, TypeScript, Remix, Tailwind CSS.
+                Key Features: Fully responsive design. I included a a dynamic greeting based on the user's name."
+                buttonText="Corporate Repo"
               />
               <Card
-                imageSrc="https://via.placeholder.com/300x200"
-                description="Project 2: A brief description."
-                buttonText="View Project"
-                buttonLink="https://example.com/project2"
+                imageSrc={WPRFE}
+                description="Dec 2024: Created React component to visualise custom trees from different models within a Big Data project. My component is currently integrated into the project's front end and serves as a key tool for analysing and interpreting the results. Tech Stack: React JS, ForceGraphs & Dagree libraries. Key Features: It works with different data models, nodes information on a dynamic card, on-right-click"
+                buttonText="Corporate Repo"
               />
               <Card
                 imageSrc="https://via.placeholder.com/300x200"
