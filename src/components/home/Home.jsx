@@ -6,7 +6,7 @@ import Card from "../card/Card.jsx";
 import IC from "../../assets/IC.png";
 import WPRFE from "../../assets/WPRFE.png";
 import NewValue from "../../assets/NewValue.png";
-import Footer from "../Footer.jsx";
+
 
 const Home = () => {
   const location = useLocation();
@@ -82,7 +82,7 @@ const Home = () => {
                 cycling around Madrid, soaking up the 🌞
               </p>
               <a
-                href="/assets/28325 CV Raquel Lores Programadora Frontend.pdf"
+                href="/assets/CV.png"
                 className="text-slate-400 text-xl font-normal hover:text-green-400 active:text-green-400 focus:outline-none"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -132,9 +132,6 @@ const Home = () => {
           )}
         </div>
       </div>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 };
