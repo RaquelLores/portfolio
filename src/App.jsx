@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header.jsx";
 import Home from "./components/home/Home.jsx";
@@ -7,15 +6,18 @@ import './index.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <div className="main_section w-full min-h-screen flex flex-col">
         <Header />
         <div className="flex-grow">
           <Routes>
-            <Route path="/*" element={<Home />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<Home />} />
+            <Route path="/projects" element={<Home />} />
+            <Route path="/contact" element={<Home />} />
           </Routes>
         </div>
-        <Footer /> 
+        <Footer />
       </div>
     </Router>
   );
