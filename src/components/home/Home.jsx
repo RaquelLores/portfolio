@@ -12,7 +12,6 @@ const Home = () => {
   const [isContentLoaded, setIsContentLoaded] = useState(false);
   const [isSplineLoaded, setIsSplineLoaded] = useState(false);
 
-  // Determine the current path
   const currentPath = location.pathname.replace("/portfolio", "");
 
   useEffect(() => {
@@ -25,7 +24,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <div className="flex-grow flex items-center justify-center px-10 pb-1">
+      <div className="flex-grow flex items-center justify-center px-10">
         <div className="text-left lg:w-3/5 md:w-2/3 sm:w-full w-full">
           {/* Render content based on the current path */}
           {currentPath === "/" && (
@@ -34,29 +33,26 @@ const Home = () => {
                 <p className="text-gray-400 text-lg">Loading content...</p>
               ) : (
                 <>
-                  <p className="text-gray-400 lg:text-2xl md:text-xl sm:text-lg text-base font-medium tracking-[0.05rem] mb-4 mt-20 leading-relaxed">
+                  <p className="text-gray-400 text-base md:text-lg sm:text-sm font-medium tracking-[0.05rem] mb-4 mt-10 leading-relaxed">
                     Meet a Front-End Developer 👩🏻‍💻,
                   </p>
-                  <h1 className="text-slate-100 text-5xl md:text-6xl lg:text-7xl font-black">
+                  <h1 className="text-slate-100 text-4xl md:text-5xl lg:text-6xl font-black">
                     Raquel Lores Casalinas
                   </h1>
-                  <h2 className="text-green-400 text-3xl md:text-4xl lg:text-5xl font-black mt-1.5">
+                  <h2 className="text-green-400 text-2xl md:text-3xl lg:text-4xl font-black mt-1.5">
                     I create things for the web.
                   </h2>
-                  <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] mb-4 leading-relaxed mt-2.5 max-w-2xl">
-                    I'm a software developer specializing in building and
-                    designing great digital experiences.
+                  <p className="text-gray-100 text-base md:text-lg lg:text-xl font-medium tracking-[0.05rem] mb-4 leading-relaxed mt-2.5 max-w-2xl">
+                    I'm a software developer specializing in building and designing great digital experiences.
                   </p>
-                  <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
+                  <p className="text-gray-100 text-base md:text-lg lg:text-xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
                     I'm currently acquiring in-depth knowledge in key areas of AI.
                   </p>
 
-                  <div className="flex items-center justify-center w-full h-[500px] sm:h-[300px]">
+                  <div className="flex items-center justify-center w-full h-[300px] sm:h-[250px] md:h-[350px] lg:h-[400px]">
                     {!isSplineLoaded && (
                       <div className="absolute inset-0 flex items-center justify-center bg-gray-900">
-                        <p className="text-gray-400 text-lg">
-                          Loading 3D Scene...
-                        </p>
+                        <p className="text-gray-400 text-sm">Loading 3D Scene...</p>
                       </div>
                     )}
                     <Spline
@@ -83,13 +79,22 @@ const Home = () => {
                 In my spare time, I enjoy hanging out with my husband and kids or
                 cycling around Madrid, soaking up the 🌞
               </p><a
-                href="/portfolio/publicAssets/CV.png"
+                href="/portfolio/publicAssets/CV Raquel Lores EN.pdf"
                 className="text-slate-400 text-xl font-normal hover:text-green-400 active:text-green-400 focus:outline-none"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <br />
-                View my CV in Spanish.
+                View and Download My CV
+              </a>
+              <a
+                href="/portfolio/publicAssets/CV Raquel Lores SP.pdf"
+                className="text-slate-400 text-xl font-normal hover:text-green-400 active:text-green-400 focus:outline-none"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <br />
+                View and Download My CV in Spanish🥘
               </a>
             </>
           )}
