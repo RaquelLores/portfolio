@@ -8,17 +8,16 @@ const Card = ({ imageSrc, description, buttonText, buttonLink }) => {
   };
 
   return (
-    <div className="card bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden group w-96">
+    <div className="card bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden group w-full h-full">
       <div className="card-image overflow-hidden">
         <img
           src={imageSrc}
           alt="Card"
-          className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+          className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-110"
         />
       </div>
-
+  
       <div className="card-body p-4">
-        {/* Show full description if expanded, otherwise truncate */}
         <p className={`card-text text-gray-300 text-sm mb-4 ${isExpanded ? "" : "line-clamp-3"}`}>
           {description}
         </p>
@@ -29,7 +28,7 @@ const Card = ({ imageSrc, description, buttonText, buttonLink }) => {
           {isExpanded ? "Read Less" : "Read More"}
         </button>
       </div>
-
+  
       <div className="card-footer p-4">
         <a
           href={buttonLink}

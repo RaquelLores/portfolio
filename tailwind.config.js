@@ -16,8 +16,12 @@ export default {
         500: '#10b981', 
         600: '#059669', 
       },
+
     },},
   },
-  plugins: [],
+
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }
 

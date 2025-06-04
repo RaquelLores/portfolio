@@ -6,6 +6,10 @@ import Card from "../card/Card.jsx";
 import IC from "../../assets/IC.png";
 import WPRFE from "../../assets/WPRFE.png";
 import NewValue from "../../assets/NewValue.png";
+import ToquenElDOM from "../../assets/ToquenElDOM.png";
+import RaquelLoresMay from "../../assets/RaquelLoresMay.png"; 
+
+
 
 const Home = () => {
   const location = useLocation();
@@ -67,20 +71,29 @@ const Home = () => {
           )}
           {currentPath === "/about" && (
             <>
-              <h1 className="text-green-500 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl mb-4">
-                Raquel Lores Casalinas
-              </h1>
+              <h1 className="flex items-center text-green-500 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl mb-4">
+  <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
+  <img
+  src={RaquelLoresMay}
+  alt="Raquel Lores Casalinas"
+  className="w-full h-full object-cover"
+/>
+  </div>
+  Raquel Lores Casalinas
+</h1>
               <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
-                I create clean, maintainable code for user interfaces with a
-                thoughtful design, focusing on performance and usability.
+                I'm a problem solver and coding is my superpower to sort business issues. 
                 <br />
-                I develop dynamic, reusable software components that are maintainable.
+                My creativity and customer-centric approach
+                help me create user-friendly interfaces and applications. 
+                <br />
+                I develop dynamic and responsive websites and reusable software components that are easy to maintain.
                 <br />
                 In my spare time, I enjoy hanging out with my husband and kids or
                 cycling around Madrid, soaking up the 🌞
               </p><a
                 href="/portfolio/publicAssets/CV Raquel Lores EN.pdf"
-                className="text-slate-400 text-xl font-normal hover:text-green-400 active:text-green-400 focus:outline-none"
+                className="text-slate-400 text-xl font-normcal hover:text-green-400 active:text-green-400 focus:outline-none"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -101,7 +114,7 @@ const Home = () => {
           {currentPath === "/projects" && (
             <>
               <h2 className="text-green-400 text-3xl font-bold mb-6">Recent Projects</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-15">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <Card
                   imageSrc={IC}
                   description="Feb 2025: I designed and developed the Analysts' Platform Home Page for Edison Next using reusable components."
@@ -118,6 +131,14 @@ const Home = () => {
                   buttonText="View Project"
                   buttonLink="https://newvalue-actualidad.vercel.app/"
                 />
+                <Card
+                  imageSrc={ToquenElDOM}
+                  description="January 2024: I designed and developed a website with an interactive piano, using vanilla JavaScript, HTML, CSS and Bootstrap."
+                  buttonText="View Project"
+                  buttonLink="https://toquen-el-dom-raquellores-projects.vercel.app/"
+                />
+
+
               </div>
             </>
           )}
