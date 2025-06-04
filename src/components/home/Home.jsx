@@ -2,129 +2,155 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Spline from "@splinetool/react-spline";
 import ContactForm from "../form/ContactForm.jsx";
-import Card from "../card/Card.jsx"; // Import the Card component
+import Card from "../card/Card.jsx";
 import IC from "../../assets/IC.png";
+import WPRFE from "../../assets/WPRFE.png";
+import NewValue from "../../assets/NewValue.png";
+import ToquenElDOM from "../../assets/ToquenElDOM.png";
+import RaquelLoresMay from "../../assets/RaquelLoresMay.png"; 
+
+
 
 const Home = () => {
   const location = useLocation();
   const [isContentLoaded, setIsContentLoaded] = useState(false);
   const [isSplineLoaded, setIsSplineLoaded] = useState(false);
 
+  const currentPath = location.pathname.replace("/portfolio", "");
+
   useEffect(() => {
-    // Simulate content loading delay (e.g., fetching data or assets)
     const timer = setTimeout(() => {
       setIsContentLoaded(true);
-    }, 500); // Adjust the delay as needed (500ms in this case)
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="flex items-center justify-center min-h-screen px-10">
-      <div className="text-left lg:w-3/5 md:w-2/3 sm:w-full w-full">
-        {location.pathname === "/" && (
-          <>
-            {!isContentLoaded ? (
-              <p className="text-gray-400 text-lg">Loading content...</p>
-            ) : (
-              <>
-                <p className="text-gray-400 lg:text-2xl md:text-xl sm:text-lg text-base font-medium tracking-[0.05rem] mb-4 mt-20 leading-relaxed">
-                  Meet a Front-End Developer 👩🏻‍💻,
-                </p>
-                <h1 className="text-slate-100 text-5xl md:text-6xl lg:text-7xl font-black">
-                  Raquel Lores Casalinas
-                </h1>
-                <h2 className="text-green-400 text-3xl md:text-4xl lg:text-5xl font-black mt-1.5">
-                  I create things for the web.
-                </h2>
-                <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] mb-4 leading-relaxed mt-2.5 max-w-2xl">
-                  I'm a software developer specializing in building and
-                  designing great digital experiences.
-                </p>
-                <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
-                  I'm currently acquiring in-depth knowledge in key areas of AI.
-                </p>
+    <div className="flex flex-col min-h-screen">
+      <div className="flex-grow flex items-center justify-center px-10">
+        <div className="text-left lg:w-3/5 md:w-2/3 sm:w-full w-full">
+          {/* Render content based on the current path */}
+          {currentPath === "/" && (
+            <>
+              {!isContentLoaded ? (
+                <p className="text-gray-400 text-lg">Loading content...</p>
+              ) : (
+                <>
+                  <p className="text-gray-400 text-base md:text-lg sm:text-sm font-medium tracking-[0.05rem] mb-4 mt-10 leading-relaxed">
+                    Meet a Front-End Developer 👩🏻‍💻,
+                  </p>
+                  <h1 className="text-slate-100 text-4xl md:text-5xl lg:text-6xl font-black">
+                    Raquel Lores Casalinas
+                  </h1>
+                  <h2 className="text-green-400 text-2xl md:text-3xl lg:text-4xl font-black mt-1.5">
+                    I create things for the web.
+                  </h2>
+                  <p className="text-gray-100 text-base md:text-lg lg:text-xl font-medium tracking-[0.05rem] mb-4 leading-relaxed mt-2.5 max-w-2xl">
+                    I'm a software developer specializing in building and designing great digital experiences.
+                  </p>
+                  <p className="text-gray-100 text-base md:text-lg lg:text-xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
+                    I'm currently acquiring in-depth knowledge in key areas of AI.
+                  </p>
 
-                {/* Spline Component with Loading Indicator */}
-                <div className="flex items-center justify-center w-full h-[500px] sm:h-[300px]">
-                  {!isSplineLoaded && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-gray-900">
-                      <p className="text-gray-400 text-lg">
-                        Loading 3D Scene...
-                      </p>
-                    </div>
-                  )}
-                  <Spline
-                    scene="https://prod.spline.design/kBQxPSiE3D55bn6W/scene.splinecode"
-                    showControls={false}
-                    onLoad={() => setIsSplineLoaded(true)}
-                  />
-                </div>
-              </>
-            )}
-          </>
-        )}
-        {location.pathname === "/about" && (
-          <>
-            <h1 className="text-green-500 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl mb-4">
-              Raquel Lores Casalinas
-            </h1>
-            <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
-              I create clean, maintainable code for user interfaces with a
-              thoughtful design, focusing on performance and usability.
-              <br />
-              At Edison Next, I’ve developed dynamic, reusable software
-              components.
-              <br />
-              In my spare time, I enjoy hanging out with my husband and kids or
-              cycling around Madrid, soaking up the 🌞
-            </p>
-            <a
-              href="/assets/28325 CV Raquel Lores Programadora Frontend.pdf"
-              className="text-slate-400 text-xl font-normal hover:text-green-400 active:text-green-400 focus:outline-none"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <br />
-              View my CV in Spanish.
-            </a>
-          </>
-        )}
+                  <div className="flex items-center justify-center w-full h-[300px] sm:h-[250px] md:h-[350px] lg:h-[400px]">
+                    {!isSplineLoaded && (
+                      <div className="absolute inset-0 flex items-center justify-center bg-gray-900">
+                        <p className="text-gray-400 text-sm">Loading 3D Scene...</p>
+                      </div>
+                    )}
+                    <Spline
+                      scene="https://prod.spline.design/kBQxPSiE3D55bn6W/scene.splinecode"
+                      showControls={false}
+                      onLoad={() => setIsSplineLoaded(true)}
+                    />
+                  </div>
+                </>
+              )}
+            </>
+          )}
+          {currentPath === "/about" && (
+            <>
+              <h1 className="flex items-center text-green-500 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl mb-4">
+  <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
+  <img
+  src={RaquelLoresMay}
+  alt="Raquel Lores Casalinas"
+  className="w-full h-full object-cover"
+/>
+  </div>
+  Raquel Lores Casalinas
+</h1>
+              <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
+                I'm a problem solver and coding is my superpower to sort business issues. 
+                <br />
+                My creativity and customer-centric approach
+                help me create user-friendly interfaces and applications. 
+                <br />
+                I develop dynamic and responsive websites and reusable software components that are easy to maintain.
+                <br />
+                In my spare time, I enjoy hanging out with my husband and kids or
+                cycling around Madrid, soaking up the 🌞
+              </p><a
+                href="/portfolio/publicAssets/CV Raquel Lores EN.pdf"
+                className="text-slate-400 text-xl font-normcal hover:text-green-400 active:text-green-400 focus:outline-none"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <br />
+                View and Download My CV
+              </a>
+              <a
+                href="/portfolio/publicAssets/CV Raquel Lores SP.pdf"
+                className="text-slate-400 text-xl font-normal hover:text-green-400 active:text-green-400 focus:outline-none"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <br />
+                View and Download My CV in Spanish🥘
+              </a>
+            </>
+          )}
+          {currentPath === "/projects" && (
+            <>
+              <h2 className="text-green-400 text-3xl font-bold mb-6">Recent Projects</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <Card
+                  imageSrc={IC}
+                  description="Feb 2025: I designed and developed the Analysts' Platform Home Page for Edison Next using reusable components."
+                  buttonText="Corporate Repo"
+                />
+                <Card
+                  imageSrc={WPRFE}
+                  description="Dec 2024: Created React component to visualise custom trees from different models within an Edison Next Big Data project."
+                  buttonText="Corporate Repo"
+                />
+                <Card
+                  imageSrc={NewValue}
+                  description="May 2024: I developed a News Management Application as part of a Scrum team for the NewValue website."
+                  buttonText="View Project"
+                  buttonLink="https://newvalue-actualidad.vercel.app/"
+                />
+                <Card
+                  imageSrc={ToquenElDOM}
+                  description="January 2024: I designed and developed a website with an interactive piano, using vanilla JavaScript, HTML, CSS and Bootstrap."
+                  buttonText="View Project"
+                  buttonLink="https://toquen-el-dom-raquellores-projects.vercel.app/"
+                />
 
-{location.pathname === "/portfolio" && (
-  <>
-    <h2 className="text-green-400 text-3xl font-bold mb-6">Projects</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-              <Card
-                imageSrc={IC}
-                description="Project 1: Analysts Tool Home. Stack: Figma, React JS, TypeScript, Tailwind CSS. Responsive, dynamic username, reusable components."
-                buttonText="Private Repo"
-                buttonLink=""
-              />
-              <Card
-                imageSrc="https://via.placeholder.com/300x200"
-                description="Project 2: A brief description."
-                buttonText="View Project"
-                buttonLink="https://example.com/project2"
-              />
-              <Card
-                imageSrc="https://via.placeholder.com/300x200"
-                description="Project 3: A brief description."
-                buttonText="View Project"
-                buttonLink="https://example.com/project3"
-              />
+
+              </div>
+            </>
+          )}
+          {currentPath === "/contact" && (
+            <div className="text-gray-100 max-w-2xl">
+              <p className="text-base md:text-lg font-medium tracking-[0.05rem] leading-relaxed mb-4">
+                Drop me a line:
+              </p>
+              <ContactForm />
             </div>
-          </>
-        )}
-
-        {location.pathname === "/contact" && (
-          <div className="text-gray-100 max-w-2xl">
-            <p className="text-base md:text-lg font-medium tracking-[0.05rem] leading-relaxed mb-4">
-              Drop me a line:
-            </p>
-            <ContactForm />
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
