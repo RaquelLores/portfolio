@@ -54,18 +54,20 @@ const Home = () => {
                     I'm currently acquiring in-depth knowledge in key areas of AI.
                   </p>
 
-                  <div className="flex items-center justify-center w-full h-[300px] sm:h-[250px] md:h-[350px] lg:h-[400px]">
-                    {!isSplineLoaded && (
-                      <div className="absolute inset-0 flex items-center justify-center bg-gray-900">
-                        <p className="text-gray-400 text-sm">Loading 3D Scene...</p>
-                      </div>
-                    )}
-                    <Spline
-                      scene="https://prod.spline.design/kBQxPSiE3D55bn6W/scene.splinecode"
-                      showControls={false}
-                      onLoad={() => setIsSplineLoaded(true)}
-                    />
-                  </div>
+                  <div className="flex items-center justify-center w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] overflow-hidden relative">
+  {!isSplineLoaded && (
+    <div className="absolute inset-0 flex items-center justify-center bg-gray-900">
+      <p className="text-gray-400 text-sm">Loading 3D Scene...</p>
+    </div>
+  )}
+  <div className="w-full h-full flex items-center justify-center">
+    <Spline
+      scene="https://prod.spline.design/kBQxPSiE3D55bn6W/scene.splinecode"
+      showControls={false}
+      onLoad={() => setIsSplineLoaded(true)}
+    />
+  </div>
+</div>
                 </>
               )}
             </>
