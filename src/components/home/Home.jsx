@@ -7,7 +7,8 @@ import IC from "../../assets/IC.png";
 import WPRFE from "../../assets/WPRFE.png";
 import NewValue from "../../assets/NewValue.png";
 import ToquenElDOM from "../../assets/ToquenElDOM.png";
-import RaquelLoresMay from "../../assets/RaquelLoresMay.png"; 
+import RaquelLoresMay from "../../assets/RaquelLoresMay.png";
+import flags from 'emoji-flags';
 
 
 
@@ -72,33 +73,32 @@ const Home = () => {
           {currentPath === "/about" && (
             <>
               <h1 className="flex items-center text-green-500 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl mb-4">
-  <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-  <img
-  src={RaquelLoresMay}
-  alt="Raquel Lores Casalinas"
-  className="w-full h-full object-cover"
-/>
-  </div>
-  Raquel Lores Casalinas
-</h1>
+                <div className="w-14 h-14 rounded-full overflow-hidden mr-4">
+                  <img
+                    src={RaquelLoresMay}
+                    alt="Raquel Lores Casalinas"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                Raquel Lores Casalinas. 
+              </h1>
               <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
-                I'm a problem solver and coding is my superpower to sort business issues. 
-                <br />
-                My creativity and customer-centric approach
-                help me create user-friendly interfaces and applications. 
-                <br />
-                I develop dynamic and responsive websites and reusable software components that are easy to maintain.
-                <br />
-                In my spare time, I enjoy hanging out with my husband and kids or
-                cycling around Madrid, soaking up the 🌞
+                I'm a problem solver who uses coding as a superpower to tackle business challenges.
+                <div className="mb-0.1">
+                With a creative mindset and a customer-centric approach, I design applications and interfaces that enhance the user experience.
+                </div>
+                <br/>
+                I specialise in building dynamic, responsive websites and reusable software components that are easy to maintain and scale.
+                <br/>
+                When I'm not coding, you'll find me spending time with my husband and kids or cycling around Madrid, soaking up the sunshine 🌞
               </p><a
                 href="/portfolio/publicAssets/CV Raquel Lores EN.pdf"
-                className="text-slate-400 text-xl font-normcal hover:text-green-400 active:text-green-400 focus:outline-none"
+                className="text-slate-400 text-xl font-normcal hover:text-green-400 active:text-green-400 focus:outline-none mr-3"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <br />
-                View and Download My CV
+                <span>Download my CV {flags.GB.emoji}</span> 
               </a>
               <a
                 href="/portfolio/publicAssets/CV Raquel Lores SP.pdf"
@@ -106,9 +106,9 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <br />
-                View and Download My CV in Spanish🥘
+                <span>{flags.ES.emoji}</span>
               </a>
+              
             </>
           )}
           {currentPath === "/projects" && (
