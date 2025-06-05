@@ -1,6 +1,6 @@
 # Web Development Projects Repository
 (Spanish follows)
-This repository will contain my collection of projects developed during my journey in web development. Each project showcases different aspects of web technologies, including HTML, CSS, JavaScript, and various frameworks/libraries such as React. 
+This repository contains my collection of projects developed during my journey in web development. Each project showcases different aspects of web technologies, including HTML, CSS, JavaScript, and various frameworks/libraries such as React. 
 The aim of this repository is to document my learning process, showcase my skills, and serve as a portfolio of my work.
 It is continuously updated as I develop new projects and refine existing ones. 
 
@@ -25,10 +25,10 @@ Secciones del portafolio
 
 Portfolio: Es la primera página y contiene un componente interactivo.
 
-About: Breve descripción sobre mí y enlace a mi CV.
+About: Breve descripción sobre mí y enlace a mi CV en inglés y castellano.
 
-Projects: Una galería de proyectos destacados que he desarrollado, con enlaces y descripciones breves (em construcción).
+Projects: Una galería de proyectos destacados que he desarrollado, con enlaces y descripciones breves.
 
-Contact: Formulario de contacto (en construcción).
+Contact: Formulario de contacto.
 
 ¡Espero que te guste! Si tienes alguna pregunta o sugerencia, no dudes en contactarme. ¡Gracias por visitar!
