@@ -51,7 +51,7 @@ const Home = () => {
                     I'm a software developer specializing in building and designing great digital experiences.
                   </p>
                   <p className="text-gray-100 text-base md:text-lg lg:text-xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
-                    I am actively practicing algorithms and data structures, with a strong interest in gaining in-depth knowledge of key areas in artificial intelligence.
+                    I am actively practicing algorithms and data structures, with a strong interest in accessibility.
                   </p>
 
                   <div className="flex items-center justify-center w-full h-[180px] sm:h-[220px] md:h-[260px] lg:h-[320px] overflow-hidden relative">
