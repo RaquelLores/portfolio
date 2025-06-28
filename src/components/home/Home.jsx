@@ -7,7 +7,7 @@ import IC from "../../assets/IC.png";
 import WPRFE from "../../assets/WPRFE.png";
 import NewValue from "../../assets/NewValue.png";
 import ToquenElDOM from "../../assets/ToquenElDOM.png";
-import RaquelLoresMay from "../../assets/RaquelLoresMay.png";
+import rloressmallpic from "../../assets/rloressmallpic.png";
 import flags from 'emoji-flags';
 
 
@@ -77,7 +77,7 @@ const Home = () => {
               <h1 className="flex items-center text-green-500 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl mb-3">
                 <div className="w-14 h-14 rounded-full overflow-hidden mr-4">
                   <img
-                    src={RaquelLoresMay}
+                    src={rloressmallpic}
                     alt="Raquel Lores Casalinas"
                     className="w-full h-full object-cover"
                   />
@@ -96,16 +96,16 @@ const Home = () => {
               </p><div className="mt-6">
                 <span className="block text-slate-300 text-lg font-semibold mb-2">Download my CV:</span>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <a
-                    href="/portfolio/publicAssets/CV Raquel Lores EN.pdf"
+                  {/* <a
+                    href="/portfolio/assets/CV Raquel Lores EN.pdf"
                     className="flex items-center text-slate-400 text-xl font-normal hover:text-green-400 active:text-green-400 focus:outline-none"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <span className="mr-2">{flags.GB.emoji}</span> English CV
-                  </a>
+                  </a> */}
                   <a
-                    href="/portfolio/publicAssets/CV Raquel Lores SP.pdf"
+                    href="/portfolio/assets/CV Raquel Lores SP.pdf"
                     className="flex items-center text-slate-400 text-xl font-normal hover:text-green-400 active:text-green-400 focus:outline-none"
                     target="_blank"
                     rel="noopener noreferrer"
