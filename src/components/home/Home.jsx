@@ -8,7 +8,7 @@ import WPRFE from "../../assets/WPRFE.png";
 import NewValue from "../../assets/NewValue.png";
 import ToquenElDOM from "../../assets/ToquenElDOM.png";
 import rloressmallpic from "../../assets/rloressmallpic.png";
-import flags from 'emoji-flags';
+//import flags from 'emoji-flags';
 
 
 
@@ -19,6 +19,11 @@ const Home = () => {
 
   const currentPath = location.pathname.replace("/portfolio", "");
 
+  const isHome = currentPath === "/";
+  const sectionClass = isHome
+  ? "flex-grow flex items-center justify-center px-6 md:px-10 py-6"
+  : "flex-grow flex items-start justify-center px-6 md:px-10 py-8";
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsContentLoaded(true);
@@ -28,8 +33,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <div className="flex-grow flex items-center justify-center px-10">
+    <div className="flex flex-col h-full">
+      <div className={sectionClass}>
         <div className="text-left lg:w-3/5 md:w-2/3 sm:w-full w-full">
           {/* Render content based on the current path */}
           {currentPath === "/" && (
@@ -85,14 +90,14 @@ const Home = () => {
                 Raquel Lores Casalinas.
               </h1>
               <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
-                I'm a problem‑solver developer who uses clean, modern code to tackle business problems and make data easier to understand.
+                I'm a problem-solver developer who uses clean, modern code to tackle business problems and make data easier to understand.
                 <div className="mb-0.1">
-                  With a customer‑centric mindset, I design and test interfaces that improve usability and performance across devices.
+                  With a customer-centric mindset, I design and test interfaces that improve usability and performance across devices.
                 </div>
                 <br />
-                I specialise in building component‑based web applications with React and TypeScript that are easy to maintain, test, and scale. 
+                I specialise in building component-based web applications with React and TypeScript that are easy to maintain, test, and scale. 
                 <br />
-                When I’m not coding, I’m with my husband and kids or cycling around Madrid, recharging in the sunshine.🌞
+                When I'm not coding, I'm with my husband and kids or cycling around Madrid, recharging in the sunshine.🌞
               </p><div className="mt-6">
                 <span className="block text-slate-300 text-lg font-semibold mb-2">Download my CV:</span>
                 <div className="flex flex-col sm:flex-row gap-3">

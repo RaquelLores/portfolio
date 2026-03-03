@@ -9,14 +9,14 @@ function App() {
     <Router basename="/portfolio">
       <div className="main_section w-full min-h-screen flex flex-col">
         <Header />
-        <div className="flex-grow">
+        <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<Home />} />
             <Route path="/projects" element={<Home />} />
             <Route path="/contact" element={<Home />} />
           </Routes>
-        </div>
+        </main>
         <Footer />
       </div>
     </Router>
