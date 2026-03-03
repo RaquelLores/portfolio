@@ -51,7 +51,7 @@ const Home = () => {
                     I'm a software developer specializing in building and designing great digital experiences.
                   </p>
                   <p className="text-gray-100 text-base md:text-lg lg:text-xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
-                    I am actively practicing algorithms and data structures, with a strong interest in accessibility.
+                    I am actively practicing algorithms and data structures, with a strong interest in improving User experience.
                   </p>
 
                   <div className="flex items-center justify-center w-full h-[180px] sm:h-[220px] md:h-[260px] lg:h-[320px] overflow-hidden relative">
@@ -85,32 +85,32 @@ const Home = () => {
                 Raquel Lores Casalinas.
               </h1>
               <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
-                I'm a problem solver who uses coding as a superpower to tackle business challenges.
+                I'm a problem‑solver developer who uses clean, modern code to tackle business problems and make data easier to understand.
                 <div className="mb-0.1">
-                  With a customer-centric approach, I design applications and interfaces that enhance the user experience.
+                  With a customer‑centric mindset, I design and test interfaces that improve usability and performance across devices.
                 </div>
                 <br />
-                I specialise in building dynamic websites and reusable software components that are easy to maintain and scale.
+                I specialise in building component‑based web applications with React and TypeScript that are easy to maintain, test, and scale. 
                 <br />
-                When I'm not coding, you'll find me spending time with my husband and kids or cycling around Madrid, soaking up the sunshine 🌞
+                When I’m not coding, I’m with my husband and kids or cycling around Madrid, recharging in the sunshine.🌞
               </p><div className="mt-6">
                 <span className="block text-slate-300 text-lg font-semibold mb-2">Download my CV:</span>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  {/* <a
-                    href="/portfolio/assets/CV Raquel Lores EN.pdf"
-                    className="flex items-center text-slate-400 text-xl font-normal hover:text-green-400 active:text-green-400 focus:outline-none"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span className="mr-2">{flags.GB.emoji}</span> English CV
-                  </a> */}
                   <a
-                    href="/portfolio/assets/CV Raquel Lores SP.pdf"
+                    href="/portfolio/assets/Curriculum vitae 26UXE.pdf"
                     className="flex items-center text-slate-400 text-xl font-normal hover:text-green-400 active:text-green-400 focus:outline-none"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span className="mr-2">{flags.ES.emoji}</span> CV en Español
+                    <span className="mr-2"></span> English CV
+                  </a>
+                  <a
+                    href="/portfolio/assets/Curriculum vitae 26UXS.pdf"
+                    className="flex items-center text-slate-400 text-xl font-normal hover:text-green-400 active:text-green-400 focus:outline-none"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="mr-2"></span> Spanish CV
                   </a>
                 </div>
               </div>
