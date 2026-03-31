@@ -92,7 +92,7 @@ const Home = () => {
                 Raquel Lores Casalinas.
               </h1>
               <div className="max-w-2xl space-y-4 text-base font-medium leading-relaxed tracking-[0.05rem] text-gray-100 sm:text-lg md:text-xl lg:text-2xl">
-                <p>I'm a problem-solver developer who uses clean, modern code to tackle business problems and make data easier to understand.</p>
+                <p>I'm a problem solver developer who uses clean, modern code to tackle business problems and make data easier to understand.</p>
                 <p>With a customer-centric mindset, I design and test interfaces that improve usability and performance across devices.</p>
                 <p>I specialise in building component-based web applications with React and TypeScript that are easy to maintain, test, and scale.</p>
                 <p>When I'm not coding, I'm with my husband and kids or cycling around Madrid, recharging in the sunshine.</p>
