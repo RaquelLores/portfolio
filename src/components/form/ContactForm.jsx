@@ -51,11 +51,11 @@ const ContactForm = () => {
         onChange={handleChange}
         placeholder="Your message"
         required
-        className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 w-full text-gray-900" // Updated text color
+        className="min-h-[180px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 w-full text-gray-900"
       />
       <button
         type="submit"
-        className="p-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+        className="w-full rounded-md bg-green-500 p-2 text-base text-white hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 sm:text-lg"
       >
         Send
       </button>

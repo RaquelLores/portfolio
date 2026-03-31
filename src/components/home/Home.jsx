@@ -21,8 +21,9 @@ const Home = () => {
 
   const isHome = currentPath === "/";
   const sectionClass = isHome
-  ? "flex-grow flex items-center justify-center px-6 md:px-10 py-6"
-  : "flex-grow flex items-start justify-center px-6 md:px-10 py-8";
+  ? "flex-grow flex items-center justify-center px-4 py-6 sm:px-6 md:px-8 lg:px-10"
+  : "flex-grow flex items-start justify-center px-4 py-8 sm:px-6 md:px-8 lg:px-10";
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -35,7 +36,7 @@ const Home = () => {
   return (
     <div className="flex flex-col h-full">
       <div className={sectionClass}>
-        <div className="text-left lg:w-3/5 md:w-2/3 sm:w-full w-full">
+        <div className="mx-auto w-full max-w-5xl text-left">
           {/* Render content based on the current path */}
           {currentPath === "/" && (
             <>
@@ -43,29 +44,30 @@ const Home = () => {
                 <p className="text-gray-400 text-lg">Loading content...</p>
               ) : (
                 <>
-                  <p className="text-gray-400 text-base md:text-lg sm:text-sm font-medium tracking-[0.05rem] mb-4 mt-10 leading-relaxed">
-                    Meet a Front-End Developer 👩🏻‍💻,
+                  <p className="mt-4 mb-4 text-sm font-medium leading-relaxed tracking-[0.05rem] text-gray-400 sm:text-base md:text-lg">
+                    Meet a Software Developer 👩🏻‍💻,
                   </p>
-                  <h1 className="text-slate-100 text-4xl md:text-5xl lg:text-6xl font-black">
+                  <h1 className="text-3xl font-black leading-tight text-slate-100 sm:text-4xl md:text-5xl lg:text-6xl">
+
                     Raquel Lores Casalinas
                   </h1>
-                  <h2 className="text-green-400 text-2xl md:text-3xl lg:text-4xl font-black mt-1.5">
+                  <h2 className="mt-2 text-xl font-black text-green-400 sm:text-2xl md:text-3xl lg:text-4xl">
                     I create things for the web.
                   </h2>
-                  <p className="text-gray-100 text-base md:text-lg lg:text-xl font-medium tracking-[0.05rem] mb-4 leading-relaxed mt-2.5 max-w-2xl">
-                    I'm a software developer specializing in building and designing great digital experiences.
+                  <p className="max-w-2xl text-base font-medium leading-relaxed tracking-[0.05rem] text-gray-100 md:text-lg lg:text-xl">
+                    I'm specializing in building and designing great digital experiences.
                   </p>
-                  <p className="text-gray-100 text-base md:text-lg lg:text-xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
+                  <p className="max-w-2xl text-base font-medium leading-relaxed tracking-[0.05rem] text-gray-100 md:text-lg lg:text-xl">
                     I am actively practicing algorithms and data structures, with a strong interest in improving User experience.
                   </p>
 
-                  <div className="flex items-center justify-center w-full h-[180px] sm:h-[220px] md:h-[260px] lg:h-[320px] overflow-hidden relative">
+                  <div className="relative mx-auto mt-6 flex h-[180px] w-full max-w-2xl items-center justify-center overflow-hidden sm:h-[220px] md:h-[260px] lg:h-[320px]">
                     {!isSplineLoaded && (
                       <div className="absolute inset-0 flex items-center justify-center bg-gray-900">
                         <p className="text-gray-400 text-sm">Loading 3D Scene...</p>
                       </div>
                     )}
-                    <div className="w-full h-full flex items-center justify-center">
+                    <div className="flex h-full w-full items-center justify-center">
                       <Spline
                         scene="https://prod.spline.design/kBQxPSiE3D55bn6W/scene.splinecode"
                         showControls={false}
@@ -79,7 +81,7 @@ const Home = () => {
           )}
           {currentPath === "/about" && (
             <>
-              <h1 className="flex items-center text-green-500 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl mb-3">
+              <h1 className="mb-3 flex max-w-2xl items-center text-lg font-medium leading-relaxed tracking-[0.05rem] text-green-500 md:text-xl lg:text-2xl">
                 <div className="w-14 h-14 rounded-full overflow-hidden mr-4">
                   <img
                     src={rloressmallpic}
@@ -89,21 +91,19 @@ const Home = () => {
                 </div>
                 Raquel Lores Casalinas.
               </h1>
-              <p className="text-gray-100 text-lg md:text-xl lg:text-2xl font-medium tracking-[0.05rem] leading-relaxed max-w-2xl">
-                I'm a problem-solver developer who uses clean, modern code to tackle business problems and make data easier to understand.
-                <div className="mb-0.1">
-                  With a customer-centric mindset, I design and test interfaces that improve usability and performance across devices.
-                </div>
-                <br />
-                I specialise in building component-based web applications with React and TypeScript that are easy to maintain, test, and scale. 
-                <br />
-                When I'm not coding, I'm with my husband and kids or cycling around Madrid, recharging in the sunshine.🌞
-              </p><div className="mt-6">
+              <div className="max-w-2xl space-y-4 text-base font-medium leading-relaxed tracking-[0.05rem] text-gray-100 sm:text-lg md:text-xl lg:text-2xl">
+                <p>I'm a problem-solver developer who uses clean, modern code to tackle business problems and make data easier to understand.</p>
+                <p>With a customer-centric mindset, I design and test interfaces that improve usability and performance across devices.</p>
+                <p>I specialise in building component-based web applications with React and TypeScript that are easy to maintain, test, and scale.</p>
+                <p>When I'm not coding, I'm with my husband and kids or cycling around Madrid, recharging in the sunshine.</p>
+              </div>
+
+              <div className="mt-6 max-w-2xl">
                 <span className="block text-slate-300 text-lg font-semibold mb-2">Download my CV:</span>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
                     href="/portfolio/assets/Curriculum vitae 26UXE.pdf"
-                    className="flex items-center text-slate-400 text-xl font-normal hover:text-green-400 active:text-green-400 focus:outline-none"
+                    className="flex items-center text-base font-normal text-slate-400 hover:text-green-400 active:text-green-400 focus:outline-none sm:text-lg"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -111,7 +111,7 @@ const Home = () => {
                   </a>
                   <a
                     href="/portfolio/assets/Curriculum vitae 26UXS.pdf"
-                    className="flex items-center text-slate-400 text-xl font-normal hover:text-green-400 active:text-green-400 focus:outline-none"
+                    className="flex items-center text-base font-normal text-slate-400 hover:text-green-400 active:text-green-400 focus:outline-none sm:text-lg"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -154,8 +154,8 @@ const Home = () => {
             </>
           )}
           {currentPath === "/contact" && (
-            <div className="text-gray-100 max-w-2xl">
-              <p className="text-base md:text-lg font-medium tracking-[0.05rem] leading-relaxed mb-4">
+            <div className="mx-auto w-full max-w-2xl text-gray-100">
+              <p className="mb-4 text-base font-medium leading-relaxed tracking-[0.05rem] md:text-lg">
                 Drop me a line:
               </p>
               <ContactForm />

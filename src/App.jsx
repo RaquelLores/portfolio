@@ -7,7 +7,7 @@ import './index.css';
 function App() {
   return (
     <Router basename="/portfolio">
-      <div className="main_section w-full min-h-screen flex flex-col">
+      <div className="main_section flex min-h-dvh w-full flex-col">
         <Header />
         <main className="flex-1">
           <Routes>

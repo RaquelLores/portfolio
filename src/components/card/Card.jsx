@@ -8,16 +8,16 @@ const Card = ({ imageSrc, description, buttonText, buttonLink }) => {
   };
 
   return (
-    <div className="card bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden group w-full h-full">
+    <div className="group flex h-full flex-col overflow-hidden rounded-lg bg-gray-800 text-white shadow-lg">
       <div className="card-image overflow-hidden">
         <img
           src={imageSrc}
           alt="Card"
-          className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-110"
+          className="aspect-[16/10] w-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </div>
   
-      <div className="card-body p-4">
+      <div className="flex flex-1 flex-col p-4">
         <p className={`card-text text-gray-300 text-sm mb-4 ${isExpanded ? "" : "line-clamp-3"}`}>
           {description}
         </p>
@@ -29,15 +29,20 @@ const Card = ({ imageSrc, description, buttonText, buttonLink }) => {
         </button>
       </div>
   
-      <div className="card-footer p-4">
+      <div className="mt-auto p-4">
+        {buttonLink ? (
         <a
-          href={buttonLink}
-          className="btn bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition duration-300"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {buttonText}
-        </a>
+        href={buttonLink}
+        className="inline-block rounded bg-green-500 px-4 py-2 text-white transition duration-300 hover:bg-green-600"
+        target="_blank"
+        rel="noopener noreferrer"
+  >
+        {buttonText}
+      </a>
+    ) : (
+      <p className="text-sm text-slate-400">Private repository</p>
+    )}
+
       </div>
     </div>
   );
